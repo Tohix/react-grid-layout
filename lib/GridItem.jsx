@@ -191,7 +191,7 @@ export default class GridItem extends React.Component<Props, State> {
     const out = {
       left: Math.round((colWidth + margin[0]) * x + containerPadding[0]),
       // top: Math.round((rowHeight + margin[1]) * y + containerPadding[1]),
-      top: Math.round((rowHeight + margin[1] / 30) * y + containerPadding[1]),
+      top: Math.round((rowHeight + margin[1] / 25) * y + containerPadding[1]),
       // 0 * Infinity === NaN, which causes problems with resize constraints;
       // Fix this if it occurs.
       // Note we do it here rather than later because Math.round(Infinity) causes deopt
