@@ -145,7 +145,7 @@ var GridItem = (function(_React$Component) {
     var out = {
       left: Math.round((colWidth + margin[0]) * x + containerPadding[0]),
       // top: Math.round((rowHeight + margin[1]) * y + containerPadding[1]),
-      top: Math.round((rowHeight + margin[1] / 30) * y + containerPadding[1]),
+      top: Math.round((rowHeight + margin[1] / 25) * y + containerPadding[1]),
       // 0 * Infinity === NaN, which causes problems with resize constraints;
       // Fix this if it occurs.
       // Note we do it here rather than later because Math.round(Infinity) causes deopt
@@ -155,9 +155,8 @@ var GridItem = (function(_React$Component) {
           : Math.round(colWidth * w + Math.max(0, w - 1) * margin[0]),
       height:
         h === Infinity
-          ? h
-          : // : Math.round(rowHeight * h + Math.max(0, h - 1) * margin[1])
-            Math.round(rowHeight * h)
+          ? h // : Math.round(rowHeight * h + Math.max(0, h - 1) * margin[1])
+          : Math.round(rowHeight * h)
     };
 
     if (state && state.resizing) {
